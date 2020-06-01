@@ -3,9 +3,9 @@ development:
   encoding: utf8
   database: coffee_app_development
   pool: 5
-  username: karirin
-  password: karirin3948
-  host: localhost
+  username: root
+  password: <%= ENV['DB_PASSWORD'] %>
+  host: <%= ENV['DB_HOSTNAME'] %>
 
 test:
   adapter: mysql2
@@ -13,9 +13,9 @@ test:
   reconnect: false
   database: coffee_app_test
   pool: 5
-  username: karirin
-  password: karirin3948
-  host: localhost
+  username: root
+  password: <%= ENV['DB_PASSWORD'] %>
+  host: <%= ENV['DB_HOSTNAME'] %>
 
 production:
   adapter: mysql2
