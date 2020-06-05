@@ -1,6 +1,6 @@
-<%# <% if @likingfeed_items.any? %> %>
+<% if @likingfeed_items.any? %>
   <ol class="Posts">
-         <%# <% @likingfeed_items.each do |like| %> %>
+         <% @likingfeed_items.each do |like| %>
             <%# <% post = Post.find_by(id: like.post_id) %> %>
   <li>
    <%# <a href="/post/<%= post.id %>"> %>
