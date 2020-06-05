@@ -1,5 +1,3 @@
-<%= image_tag @user.image.url ,class: 'userinfo_image', size: '200x200' unless @user.image.blank? %>
-<div class="name"><%= @user.name %></div>
 <% @user ||= current_user %>
 <div class="mystats">
   <a href="<%= following_user_path(@user) %>">
@@ -13,4 +11,3 @@
     </strong>
   </a>
 </div>
-
