@@ -11,17 +11,6 @@ services:
     volumes:
       - tmp_data:/coffee_app/tmp/sockets
       - .:/coffee_app
-    depends_on:
-      - db
-
-  db:
-    build:
-      context: .
-      dockerfile: ./docker/mysql/Dockerfile
-    ports:
-      - '3300:3306'
-    volumes:
-      - db_data:/var/lib/mysql
 
   nginx:
     build:
