@@ -4,7 +4,7 @@ User.create!(name: 'テストユーザー',
              email: 'test@example.com',
              password: 'test123',
              password_confirmation: 'test123',
-             image: open('app/assets/images/user_image/business_man_macho.png'),
+#             image: open('app/assets/images/user_image/business_man_macho.png'),
              self_introduction: '初めまして！
 最近、coffeeappをはじめたものです！
 よろしくお願いします！',
