@@ -4,7 +4,7 @@ services:
     build:
       context: .
       dockerfile: ./docker/rails/Dockerfile
-    command: bundle exec unicorn_rails -c /coffee_app/config/unicorn.conf.rb -D -E production 
+    command: bundle exec unicorn_rails -c /coffee_app/config/unicorn.conf.rb -E production 
 #    command: bundle exec unicorn_rails -c /coffee_app/config/unicorn.conf.rb
     ports:
       - '3001:3000'

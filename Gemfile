@@ -26,6 +26,7 @@ gem 'uglifier', '3.2.0'
 gem 'will_paginate', '3.1.6'
 gem 'mysql2'
 gem 'dotenv-rails'
+gem 'fog-aws'
 
 group :development, :test do
   #  gem 'sqlite3', '1.3.13'

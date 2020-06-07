@@ -14,5 +14,18 @@
 //= require_tree .
 //= require jquery
 //= require jquery_ujs
+//= require underscore
 //= require gmaps/google
 //= require bootstrap-sprockets
+
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+}
+);
+
+$(function () {
+$(".search.box").hide();
+    $(".search.btn.btn-default").click(function () {
+        $(".search.box").slideToggle();
+}
+    )});

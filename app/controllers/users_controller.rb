@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class UsersController < ApplicationController
+  protect_from_forgery
   before_action :logged_in_user, only: %i[edit update destroy
                                           following followers]
   before_action :correct_user,   only: %i[edit update]
