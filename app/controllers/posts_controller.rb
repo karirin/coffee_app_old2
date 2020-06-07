@@ -66,6 +66,7 @@ class PostsController < ApplicationController
     @hash = Gmaps4rails.build_markers(@posts) do |post, marker|
       marker.lat post.latitude
       marker.lng post.longitude
+      marker.infowindow render_to_string(partial: 'shared/infowindow', locals: { post: post })
       #      marker.infowindow render_to_string(partial: 'static_pages/show', locals: { post: @post })
       # post.imageが検索できないため後回し
     end
