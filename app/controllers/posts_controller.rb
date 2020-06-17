@@ -75,7 +75,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:user, :store_name, :address, :address_prefectures, :image, :time_start, :time_end, :wifi, :plug, :tabacco, :card, :evaluation1, :evaluation2, :evaluation3, :evaluation4, :evaluation5)
+    params.require(:post).permit(:user, :store_name, :address, :address_prefectures, :image, :image_cache, :time_start, :time_end, :wifi, :plug, :tabacco, :card, :evaluation1, :evaluation2, :evaluation3, :evaluation4, :evaluation5)
   end
 
   def search_params

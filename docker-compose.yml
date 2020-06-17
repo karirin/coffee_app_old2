@@ -22,5 +22,4 @@ services:
       - tmp_data:/var/tmp/
 
 volumes:
-  db_data:
   tmp_data:

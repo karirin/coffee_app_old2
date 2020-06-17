@@ -1,7 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
   -webkit-box-sizing: border-box;
@@ -142,7 +141,6 @@ aside {
 
 .user_info{
   text-align: center;
-
 .userinfo_image{
   border:solid;
   border-radius: 50%;
@@ -282,11 +280,10 @@ input {
   .field_with_errors {
     display: inline-block;
     input{
-padding: 0;
+      padding: 0;
     }
   }
 }
-
 
 .checkbox {
   margin-top: -10px;
@@ -338,9 +335,6 @@ padding: 0;
   }
   }
 
-
-
-
 .Refine_search{
   text-align: center;
   margin: 10px 0;
@@ -352,16 +346,11 @@ padding: 0;
   }
 }
 
-
 .Allpost{
   display: inline-block;
   margin:  10px 10px;
   vertical-align: top;
   text-align: center;
-  #map{
-    text-align: center;
-    display: inline-block;
-  }
 }
 
 .Posts {
@@ -493,10 +482,10 @@ span.picture {
   }
 }
 
-  div{
-    margin-top: 10px;
-    &:hover{
-      opacity: 0.7;
+div{
+  margin-top: 10px;
+  &:hover{
+  opacity: 0.7;
     }
   }
   img{
@@ -581,6 +570,14 @@ span.picture {
   margin: 0;
 }
 
+.showAllpost{
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  #map{
+    text-align: center;
+    display: inline-block;
+  }
 .showAllpost_detail {
   display: inline-block;
   width: 100%;
@@ -602,6 +599,7 @@ span.picture {
       margin: 0;
     }
   }  
+}
 }
 
 .search.box{
@@ -660,7 +658,9 @@ span.picture {
   }
 }
 
-
+#map2{
+  text-align:center;
+}
 
 
 

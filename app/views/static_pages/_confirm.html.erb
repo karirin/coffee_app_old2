@@ -21,7 +21,7 @@
       <th>カフェの画像</th>
       <td>
         <%= image_tag @post.image.url, :size =>'300x250'%>
-                <%= f.hidden_field :image %>
+                <%= f.hidden_field :image_cache %>
       </td>
     </tr>
             <tr>
@@ -95,7 +95,7 @@
         <%= f.hidden_field :store_name %>
         <%= f.hidden_field :address %>
         <%= f.hidden_field :address_prefectures %>
-        <%= f.hidden_field :image %>
+        <%= f.hidden_field :image_cache %>
         <%= f.hidden_field :time_start %>
         <%= f.hidden_field :time_end %>
         <%= f.hidden_field :wifi %>

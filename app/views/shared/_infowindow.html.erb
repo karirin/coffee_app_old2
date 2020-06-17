@@ -1,4 +1,4 @@
 <%= link_to post_path(post) do %>
-  <div><h4><%= post.store_name %></h4></div>
-  <div><%= post.image%></div>
+  <div><%= image_tag post.image, :size => '100x100'%></div>
+    <div><h4><%= post.store_name %></h4></div>
 <% end %>
