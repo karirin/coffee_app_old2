@@ -7,12 +7,15 @@ gem 'bootstrap-sass', '3.3.7'
 gem 'bootstrap-will_paginate', '1.0.0'
 gem 'carrierwave', '~> 1.3', '>= 1.3.1'
 gem 'coffee-rails', '4.2.2'
+gem 'dotenv-rails'
 gem 'faker', '1.7.3'
+gem 'fog-aws'
 gem 'geocoder'
 gem 'gmaps4rails'
 gem 'jbuilder', '2.7.0'
 gem 'jquery-rails', '4.3.1'
 gem 'jquery-ui-rails'
+gem 'mysql2'
 gem 'pry-rails'
 gem 'puma', '3.9.1'
 gem 'rails', '5.1.6'
@@ -24,16 +27,12 @@ gem 'sass-rails', '5.0.6'
 gem 'turbolinks', '5.0.1'
 gem 'uglifier', '3.2.0'
 gem 'will_paginate', '3.1.6'
-gem 'mysql2'
-gem 'dotenv-rails'
-gem 'fog-aws'
-gem 'uglifier', '3.2.0'
 
 group :development, :test do
   #  gem 'sqlite3', '1.3.13'
-  gem "rspec-rails"
-  gem "factory_bot_rails"
   gem 'byebug', '9.0.6', platform: :mri
+  gem 'factory_bot_rails'
+  gem 'rspec-rails'
 end
 
 group :development do
@@ -44,12 +43,10 @@ group :development do
 end
 
 group :test do
+  gem 'capybara', '>= 2.15'
   gem 'guard',                    '2.13.0'
   gem 'rails-controller-testing', '1.0.2'
-  gem 'capybara', '>= 2.15'
-  gem 'shoulda-matchers',
-    git: 'https://github.com/thoughtbot/shoulda-matchers.git',
-    branch: 'rails-5'
+  gem 'shoulda-matchers'
 end
 
 group :production, :staging do

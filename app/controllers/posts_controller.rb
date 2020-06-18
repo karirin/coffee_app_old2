@@ -67,8 +67,6 @@ class PostsController < ApplicationController
       marker.lat post.latitude
       marker.lng post.longitude
       marker.infowindow render_to_string(partial: 'shared/infowindow', locals: { post: post })
-      #      marker.infowindow render_to_string(partial: 'static_pages/show', locals: { post: @post })
-      # post.imageが検索できないため後回し
     end
   end
 

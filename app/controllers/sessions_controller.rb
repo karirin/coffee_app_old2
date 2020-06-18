@@ -2,7 +2,7 @@
 
 class SessionsController < ApplicationController
   protect_from_forgery except: :destroy
-  
+
   def new; end
 
   def create
@@ -14,8 +14,7 @@ class SessionsController < ApplicationController
         flash[:success] = 'ログインしました。'
         redirect_to root_url
       else
-        message  = 'アカウントが有効化されていません。 '
-        message += '送信されたメールのご確認をお願いいたします。'
+        message = 'アカウントが有効化されていません。 '
         flash[:warning] = message
         redirect_to root_url
       end

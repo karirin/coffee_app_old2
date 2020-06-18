@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
@@ -7,7 +9,7 @@ RSpec.describe Post, type: :model do
     expect(post).to be_valid
   end
 
-describe '存在性の検証' do
+  describe '存在性の検証' do
     it 'お店の名前がない場合、無効であること' do
       post.store_name = ''
       post.valid?
