@@ -58,18 +58,18 @@ class UsersController < ApplicationController
   end
 
   def following
-    @title = 'フォロー中'
+    #@userがフォローしているユーザー
     @user  = User.find(params[:id])
-    @users = @user.following.paginate(page: params[:page], per_page: 6)
+    @users = @user.following
     render 'show_follow'
-  end
+end
 
-  def followers
-    @title = 'フォロワー'
+def followers
+    #@userをフォローしているユーザー
     @user  = User.find(params[:id])
-    @users = @user.followers.paginate(page: params[:page], per_page: 6)
-    render 'show_follow'
-  end
+    @users = @user.followers
+    render 'show_follower'
+end
 
   private
 

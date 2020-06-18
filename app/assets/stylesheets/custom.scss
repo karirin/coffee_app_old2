@@ -141,6 +141,10 @@ aside {
 
 .user_info{
   text-align: center;
+  .btn.btn-primary{
+    width: 80%;
+    display: inline-block;
+  }
 .userinfo_image{
   border:solid;
   border-radius: 50%;

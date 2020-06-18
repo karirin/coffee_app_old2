@@ -263,7 +263,7 @@ Post.create!(
 
 users = User.all
 user  = users.first
-following = users[2..50]
-followers = users[3..40]
-following.each { |followed| user.follow(followed) }
-followers.each { |follower| follower.follow(user) }
+# # following = users[2..50]
+# # followers = users[3..40]
+# following.each { |following_id| user.follow(following_id) }
+# followers.each { |follower_id| follower.follow(user) }
