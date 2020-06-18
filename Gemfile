@@ -27,9 +27,12 @@ gem 'will_paginate', '3.1.6'
 gem 'mysql2'
 gem 'dotenv-rails'
 gem 'fog-aws'
+gem 'uglifier', '3.2.0'
 
 group :development, :test do
   #  gem 'sqlite3', '1.3.13'
+  gem "rspec-rails"
+  gem "factory_bot_rails"
   gem 'byebug', '9.0.6', platform: :mri
 end
 
@@ -42,10 +45,11 @@ end
 
 group :test do
   gem 'guard',                    '2.13.0'
-  gem 'guard-minitest',           '2.4.4'
-  gem 'minitest',                 '5.10.3'
-  gem 'minitest-reporters',       '1.1.14'
   gem 'rails-controller-testing', '1.0.2'
+  gem 'capybara', '>= 2.15'
+  gem 'shoulda-matchers',
+    git: 'https://github.com/thoughtbot/shoulda-matchers.git',
+    branch: 'rails-5'
 end
 
 group :production, :staging do
