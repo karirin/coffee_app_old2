@@ -1,25 +1,46 @@
-version: '3'
+version: '2'
 services:
   app:
     build:
       context: .
       dockerfile: ./docker/rails/Dockerfile
-    command: bundle exec unicorn_rails -c /coffee_app/config/unicorn.conf.rb -E production 
-#    command: bundle exec unicorn_rails -c /coffee_app/config/unicorn.conf.rb
+    command: bundle exec puma -C config/puma.rb 
     ports:
-      - '3001:3000'
+      - '3000:3000'
     volumes:
-      - tmp_data:/coffee_app/tmp/sockets
-      - .:/coffee_app
-
+      - .:/app
+      - /var/tmp
+      # socketファイルの共有
+      - sockets:/app/tmp/sockets
+    tty: true
+    depends_on:
+      - db
+    extends:
+      file: ./docker/mysql/password.yml
+      service: password
+  db:
+    build:
+      context: .
+      dockerfile: ./docker/mysql/Dockerfile
+    ports:
+      - '3306:3306'
+    volumes:
+      - db_data:/var/lib/mysql
+    extends:  
+      file: ./docker/mysql/password.yml
+      service: password
   nginx:
     build:
       context: .
       dockerfile: ./docker/nginx/Dockerfile
     ports:
       - '80:80'
-    volumes:
-      - tmp_data:/var/tmp/
+      #socketファイルの共有
+    volumes: 
+      - sockets:/app/tmp/sockets
+    depends_on: 
+      - app
 
 volumes:
-  tmp_data:
+  db_data:
+  sockets:
