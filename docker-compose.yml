@@ -4,7 +4,8 @@ services:
     build:
       context: .
       dockerfile: ./docker/rails/Dockerfile
-    command: bundle exec puma -C config/puma.rb 
+#    command: bundle exec puma -C config/puma.rb 
+    command: bundle exec puma -e production -C config/puma.rb #本番環境
     ports:
       - '3000:3000'
     volumes:
