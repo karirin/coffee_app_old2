@@ -7,7 +7,7 @@
       <ul class="users follow">
         <%= render @users %>
       </ul>
-      <%= will_paginate class: "center" %>
+      <%= will_paginate class: "center", previous_label: '&lt 前へ', next_label: '次へ &gt'%>
     <% end %>
   </div>
   </div>

@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   protect_from_forgery
   before_action :logged_in_user, only: %i[edit update destroy
                                           following followers]
-  before_action :correct_user,   only: %i[edit update]
+  before_action :correct_user,   only: %i[edit update destroy]
   before_action :admin_user,     only: :destroy
 
   def index
@@ -58,17 +58,17 @@ class UsersController < ApplicationController
   end
 
   def following
-    #@userがフォローしているユーザー
     @user  = User.find(params[:id])
     @users = @user.following
+    @users = @users.paginate(page: params[:page], per_page: 10)
     render 'show_follow'
 end
 
 def followers
-    #@userをフォローしているユーザー
     @user  = User.find(params[:id])
     @users = @user.followers
-    render 'show_follower'
+    @users = @users.paginate(page: params[:page], per_page: 10)
+    render 'show_follow'
 end
 
   private

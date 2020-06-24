@@ -87,12 +87,10 @@ class User < ApplicationRecord
     following_relationships.find_by(following_id: user.id)
   end
 
-  #フォローするときのメソッド
   def follow(user)
     following_relationships.create!(following_id: user.id)
   end
 
-  #フォローを外すときのメソッド
   def unfollow(user)
     following_relationships.find_by(following_id: user.id).destroy
   end
