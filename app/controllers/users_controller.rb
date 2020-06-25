@@ -64,12 +64,12 @@ class UsersController < ApplicationController
     render 'show_follow'
 end
 
-def followers
-    @user  = User.find(params[:id])
+  def followers
+    @user = User.find(params[:id])
     @users = @user.followers
     @users = @users.paginate(page: params[:page], per_page: 10)
     render 'show_follow'
-end
+  end
 
   private
 

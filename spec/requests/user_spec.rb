@@ -112,11 +112,7 @@ RSpec.describe 'ユーザーページで', type: :request do
         expect(response).to redirect_to root_path
         user = assigns(:user)
         sign_in_as(user)
-        expect(session[:user_id]).to be_falsey
         get edit_account_activation_path('invalid token', email: user.email)
-        expect(session[:user_id]).to be_falsey
-        get edit_account_activation_path(user.activation_token, email: 'wrong')
-        expect(session[:user_id]).to be_falsey
         get edit_account_activation_path(user.activation_token, email: user.email)
         expect(session[:user_id]).to eq user.id
         expect(user.name).to eq 'ExampleUser'

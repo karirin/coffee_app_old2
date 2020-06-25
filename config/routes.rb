@@ -25,5 +25,5 @@ Rails.application.routes.draw do
   resources :posts do
     resources :likes, only: %i[destroy create]
   end
-  resources :relationships, only: [:create, :destroy]
+  resources :relationships, only: %i[create destroy]
 end

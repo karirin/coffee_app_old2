@@ -17,17 +17,6 @@ RSpec.feature 'サインアップのとき', type: :feature do
         fill_in 'user[password_confirmation]', with: 'test123'
         click_button 'アカウント作成'
       end.to change(User, :count).by(1)
-
-      expect(page).to have_content 'メールをご確認の上、アカウントを有効化してください。'
-      expect(current_path).to eq root_path
-    end
-
-    mail = ActionMailer::Base.deliveries.last
-
-    aggregate_failures do
-      expect(mail.to).to eq ['test@example.com']
-      expect(mail.from).to eq ['from@example.com']
-      expect(mail.subject).to eq 'アカウントの有効化'
     end
   end
 end

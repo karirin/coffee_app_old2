@@ -1,0 +1,15 @@
+current directory: /Users/mac/ecs/coffee_app_ver1.20/vendor/bundle/gems/bindex-0.8.1/ext/skiptrace
+/Users/mac/.rbenv/versions/2.5.1/bin/ruby -I /Users/mac/.rbenv/versions/2.5.1/lib/ruby/site_ruby/2.5.0 -r ./siteconf20200624-3085-63w1ho.rb extconf.rb
+creating Makefile
+
+current directory: /Users/mac/ecs/coffee_app_ver1.20/vendor/bundle/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /Users/mac/ecs/coffee_app_ver1.20/vendor/bundle/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR="
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.bundle
+
+current directory: /Users/mac/ecs/coffee_app_ver1.20/vendor/bundle/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20200624-3085-dgu6kw/skiptrace/internal
