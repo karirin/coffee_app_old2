@@ -19,13 +19,13 @@
 //= require bootstrap-sprockets
 
 $(function () {
-    $('[data-toggle="tooltip"]').tooltip();
-}
+  $('[data-toggle="tooltip"]').tooltip();
+  }
 );
 
 $(function () {
-$(".search.box").hide();
+  $(".search.box").hide();
     $(".search.btn.btn-default").click(function () {
         $(".search.box").slideToggle();
-}
-    )});
+  })
+});
